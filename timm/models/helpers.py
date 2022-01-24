@@ -450,6 +450,7 @@ def build_model_with_cfg(
             feature_cfg['out_indices'] = kwargs.pop('out_indices')
 
     # Build the model
+    print(kwargs)
     model = model_cls(**kwargs) if model_cfg is None else model_cls(cfg=model_cfg, **kwargs)
     model.default_cfg = default_cfg
     
